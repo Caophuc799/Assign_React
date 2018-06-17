@@ -1,0 +1,97 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+.App {
+  font-family: 'Lato', sans-serif !important;
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+.pt-navbar-heading{
+  margin-right: 5pt;
+}
+.green {
+  font-size: 13pt;
+}
+.pt-dark{
+  background-color: #00B3A4;
+  /* ["#97F3EB", "#78D5CC", "#58B8AE", "#369C91", "#008075"] */
+}
+.green b{
+  font-size: 13pt;
+}
+
+.btn-user img{
+  border-radius: 50%;
+  height: 25pt;
+  width: 25pt;
+  
+}
+.btn-user i{
+  font-size: 15pt;
+  padding-bottom: 5pt;
+}
+.btn-user span{
+  /* margin-left: 5pt; */
+  font-size: 12pt;
+  min-width: 40pt;
+  text-align: left;
+}
+
+.btn-user{
+  border-radius: 30px;
+  padding: 5px;
+  background-color: #2EE6D6 !important;
+  /* padding:5pt; */
+}
+.Logo {
+  font-size: 25pt;
+ 
+  font-style: inherit;
+   /* width: 480px; ["#97F3EB", "#78D5CC", "#58B8AE", "#369C91", "#008075"]*/
+}
+.icon-user {
+  size: 20pt;
+}
+.icon-menu{
+  font-size: 18pt;
+  padding:13pt; 
+}
+.background-navbar{
+  border:0pt;
+  
+  background-color: #06bebd !important;
+  border-color: #ffff;
+  height: 50pt;
+  padding-top: 7pt;
+}
+.pt-navbar container{
+  padding:20pt;
+}
+.pt-navbar-heading{
+  padding-top: 10pt !important;
+  padding-bottom: 10pt;
+  
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,254 @@
+/* @import "../node_modules/@blueprintjs/core/dist/blueprint.css"; */
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+.inrow{
+    grid-row: auto;
+   
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.inrow .pt-input-group{
+    display: inline-block;
+    margin-right: 10px;
+    
+    font-size: 21px;
+    min-width: 350px;
+    float: right;
+
+}
+.pt-input-group .pt-input{
+    height: 40px !important;
+}
+.pt-input-group .pt-icon{
+    margin-top: 12px;
+}
+.inrow span{
+    font-size: 40px;
+    float: left;
+}
+.inrow button{
+    float: right;
+    padding: 10pt;
+    margin-left: 8pt;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+}
+.inrow input{
+    margin-left: 8pt;
+}
+.content{
+    margin-left: 30pt;
+    margin-right:30pt;
+    margin-top: 10pt;
+    height: auto;
+    margin-bottom: 10pt;
+    
+}
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.th1{
+    width: 30px;
+}
+.th2{
+    width: 203px;
+}
+
+table {
+    margin-top: 20px;
+    font-style: normal;
+
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 12px;
+}
+
+.checkbox-choose{
+
+    min-height: auto;
+    width: 0px !important;
+    margin-left: 0px;
+    margin-bottom: 13px;
+
+
+}
+.checkbox-choose input:checked {
+    background-color: #2196F3;
+}
+.checkbox-choose span{
+    width: 0px;
+}
+
+.pt-dialog-header{
+    padding-left: 47px !important;
+    padding-right: 47px !important;
+    /* font-size: 30px; */
+    padding-top: 26px !important;
+}
+.pt-dialog-header .pt-dialog-header-title{
+    font-size: 35px !important;
+}
+.pt-dialog-close-button .pt-icon{
+    font-size: 35px !important;
+    width: 35px !important;
+    height: 35px !important;
+}
+.pt-dialog{
+    background: #ffff;
+}
+.pt-dialog{
+    position: relative;
+    display: block;
+    margin:30px;
+    width: 970px;
+}
+.body-dialog{
+    padding:0px 30px 0px 30px;
+
+    border-width: 0px !important;
+}
+.body-dialog .pt-label{
+    display: inline-block;
+    font-size: 18px;
+    
+}
+
+.body-dialog input{
+  
+    padding: 30px;
+    font-size: 18px;
+}
+.input-firstname{
+  width: 420px;   
+  margin-top:15px !important;
+  margin-bottom: 18px !important;
+}
+.choose-gender{
+    width: 420px;   
+    
+  margin-bottom: 18px !important;
+}
+.label-lastname{
+    margin-left: 30px !important;
+}
+
+.span-id{
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.span-id .pt-icon-standard{
+    font-size: 23px;
+}
+.linkProfile{
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.select-option{
+    padding: 18px;
+    font-size:18px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top:15px;
+    width: 420px;   
+    color: dimgray;
+    border-color: #d4cece;
+}
+
+.button-close{
+    float:right;
+}
+.button-close:hover{
+    cursor: pointer;
+}
+.padding-member{
+    margin-top: 20px !important;
+}
+.unit-number{
+    padding-left: 30px;
+}
+.unit-number input{
+    width: 190px;
+    
+}
+.date-day , .date-month , .date-year{
+    margin-top:15px;
+    width: 80px;
+    /* height: 20px; */
+    font-size: 15px;
+    padding: 17px !important;
+    border-width: 1px;
+    border-color:#d4cece;
+}
+.membership-day{
+    width: 410px;
+}
+.date-day{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    
+}
+.date-year{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/* 
+.cancel-dialog{
+    background-color: #ddd;
+}
+.add-customer-dialog{
+    background-color: #06bebd !important;
+    text-color: #ddd;
+
+} */
+.cancel-dialog , .add-customer-dialog{
+    font-size: 18px;
+    padding: 13px;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 180px;
+    background-color: #fff;
+    border-width: 1px;
+    box-shadow: #ddd;
+    box-shadow: 0ch;
+
+}
+.add-customer-dialog{
+    background-color: #06bebd;
+    color: #fff;
+}
+
+.btn-gender-male , .btn-gender-female{
+    margin-top:15px !important;
+    font-size: 18px;
+    padding: 17px;
+
+}
+.btn-gender-female{
+    /* background-color: #06bebd !important;
+    color: #fff; */
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.btn-gender-male{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    /* background-color: #ffff; */
+}
+.error{
+    min-height: 19px;
+    margin-top: 0px;
+    margin-bottom: -15px;
+    display:block;
+    color: red;
+}
