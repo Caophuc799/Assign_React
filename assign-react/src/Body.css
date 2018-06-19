@@ -31,51 +31,30 @@
 }
 .inrow button{
     float: right;
-    padding: 10pt;
+    padding: 8pt;
     margin-left: 8pt;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 15px;
 }
 .inrow input{
     margin-left: 8pt;
 }
 .content{
+    min-height: 482px !important;
     margin-left: 30pt;
     margin-right:30pt;
     margin-top: 10pt;
-    height: auto;
+    /* height: auto; */
     margin-bottom: 10pt;
     
-}
-
-table, td, th {    
-    border: 1px solid #ddd;
-    text-align: left;
-}
-.th1{
-    width: 30px;
-}
-.th2{
-    width: 203px;
-}
-
-table {
-    margin-top: 20px;
-    font-style: normal;
-
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    padding: 12px;
 }
 
 .checkbox-choose{
 
     min-height: auto;
     width: 0px !important;
+
     margin-left: 0px;
     margin-bottom: 13px;
 
@@ -117,7 +96,7 @@ th, td {
     border-width: 0px !important;
 }
 .body-dialog .pt-label{
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 18px;
     
 }
@@ -128,17 +107,17 @@ th, td {
     font-size: 18px;
 }
 .input-firstname{
-  width: 420px;   
+  width: 100%;   
   margin-top:15px !important;
   margin-bottom: 18px !important;
 }
 .choose-gender{
-    width: 420px;   
+    width: 90%;   
     
   margin-bottom: 18px !important;
 }
 .label-lastname{
-    margin-left: 30px !important;
+    /* margin-left: 30px !important; */
 }
 
 .span-id{
@@ -160,7 +139,7 @@ th, td {
     border-radius: 5px;
     background-color: #fff;
     margin-top:15px;
-    width: 420px;   
+    width: 90%;   
     color: dimgray;
     border-color: #d4cece;
 }
@@ -174,11 +153,16 @@ th, td {
 .padding-member{
     margin-top: 20px !important;
 }
+.padding-member select{
+    margin-top: 13px;
+    padding: 20px;
+}
 .unit-number{
-    padding-left: 30px;
+    /* padding-left: 30px; */
 }
 .unit-number input{
-    width: 190px;
+    margin-top: 16px;
+    width: 100%;
     
 }
 .date-day , .date-month , .date-year{
@@ -202,15 +186,7 @@ th, td {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-/* 
-.cancel-dialog{
-    background-color: #ddd;
-}
-.add-customer-dialog{
-    background-color: #06bebd !important;
-    text-color: #ddd;
 
-} */
 .cancel-dialog , .add-customer-dialog{
     font-size: 18px;
     padding: 13px;
@@ -251,4 +227,95 @@ th, td {
     margin-bottom: -15px;
     display:block;
     color: red;
+    
 }
+.itemtable:hover {
+    cursor: pointer;
+}
+.itemtable-show{
+    width: 100%;
+    padding:0px !important;
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.th1{
+    width: 30px;
+    padding: 12px;
+}
+.th2{
+    width: 203px;
+    padding: 12px;
+}
+
+table {
+    margin-top: 20px;
+    font-style: normal;
+
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 12px;
+}
+
+input:required {
+    border-color: #C00000;
+  }
+.unitaddress{
+    margin-top: 16px !important;
+}
+
+@media only screen and (max-width: 1057px) {
+    .inrow .pt-input-group{
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 18px;
+        min-width: 200px;
+        float: right;
+    
+    }
+    .inrow button{
+        float: right;
+        padding: 10pt;
+        margin-left: 8pt;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
+    .content{
+        margin:  10px 15px 0px 15px;
+    }
+}
+@media only screen and (max-width: 820px) {
+    .inrow .pt-input-group{
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 10px;
+        width: 150px;
+        float: right;
+        /* height: 50xp; */
+    
+    }
+    .inrow span{
+        font-size: 30px;
+        float: left;
+    }
+    .inrow .pt-input{
+        height: 10px;
+    }
+    .inrow button{
+        float: right;
+        padding: 10px;
+        margin-left: 8pt;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 13px;
+    }
+    .content{
+        margin:  5px 10px 0px 10px;
+    }
+}
+

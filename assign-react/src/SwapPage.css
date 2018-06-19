@@ -1,0 +1,22 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+.ofCount{
+    padding: 10px;
+}
+.change-page{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+.change-page button{
+    padding:15px;
+    margin: 0px 10px 0px 10px;
+}
+.btn-count{
+   
+    min-width: 50px;
+}
+.btn-next , .btn-previous{
+    min-width: 90px;
+}

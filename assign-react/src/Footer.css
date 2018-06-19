@@ -1,0 +1,48 @@
+
+footer{
+    border: 2px solid whitesmoke !important;
+    display: block;
+    position: relative;
+    background-color: white;
+    padding-left: 38pt;
+    padding-right:38pt;
+    padding-top: 10pt;
+}
+.footer-div{
+    
+    display: block;
+    border: 1px black ;
+}
+.btn-delete{
+    float: right;
+    color: red !important;
+    padding: 13px;
+    font-size: 16px;
+    display:inherit;
+    border: 10px;
+}
+.count-customer , .select-customer{
+    display:inline-block;
+    margin: 13px 20px 13px 0px;
+    font-size: 16px;
+}
+.select-customer{
+    
+    font-weight: bold;
+}
+.select-customer:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 820px) {
+    footer{
+        border: 2px solid whitesmoke !important;
+        display: block;
+        position: relative;
+        background-color: white;
+        padding-left: 15px;
+        padding-right:10pt;
+        padding-top: 10pt;
+    }
+   
+}

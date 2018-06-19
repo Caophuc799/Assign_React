@@ -1,0 +1,70 @@
+
+.pt-popover{
+    margin-top: 60px;
+}
+.header-popover{
+    font-size: 25px;
+    height: auto;
+    text-align: center;
+    position: relative;
+    padding: 18px;
+    border: 2px solid whitesmoke;
+}
+.check-email{
+    text-align: left;
+}
+.popover-filter{
+    width: 400px;
+    display: block;
+   
+}
+.header-title{
+    position: relative;
+    float: center;
+    display: inline-block;
+}
+.btn-Done , .btn-Clear{
+    font-size: 18px;
+    position: relative;
+    border-radius: 5px;
+    padding: 5px 10px;
+   
+}
+.btn-Clear{
+    float: left;
+    background-color: white;
+}
+.btn-Done{
+    float:right;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white !important;
+    background-color: #06bebd !important;
+}
+.select-option{
+    width: 100%;
+    margin: 0 auto;
+    padding: 11px;
+    display: block;
+    color: black;
+}
+.email{
+    font-size: 19px;
+    height: auto;
+    text-align: center;
+    position: relative;
+    padding: 18px;
+    border-bottom: 1px solid #ddd8d8;
+}
+.gender{
+    font-size: 19px;
+    height: auto;
+    padding:18px;
+
+}
+.gender span{
+    border: 1px solid rgb(97, 94, 94);
+}
+.gender > .pt-control{
+    margin-bottom: 0px;
+}
