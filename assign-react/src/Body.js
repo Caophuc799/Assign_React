@@ -144,7 +144,8 @@ class TableUser extends React.Component{
       count:1,
       countOf:0,
       countInPage:10,
-      conditionFilter:""
+      conditionFilter: '',
+      linkRequest : ''
       
     
     }
@@ -157,7 +158,7 @@ class TableUser extends React.Component{
         // Set state with result
         
         let count = res.data.pagination.total/this.state.countInPage;
-        console.log(count);
+        console.log(res);
         const temp = res.data.data.map( (item)=>{
           return {data:item,isChecked:false};
         })
@@ -180,7 +181,7 @@ class TableUser extends React.Component{
         const temp = res.data.data.map( (item)=>{
           return {data:item,isChecked:false};
         })
-        this.setState({data:temp});
+        this.setState({data:temp, linkRequest : link});
         
       });
   }
