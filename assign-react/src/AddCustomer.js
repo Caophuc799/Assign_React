@@ -3,7 +3,7 @@ import './Body.css';
 import './grid.css';
 import {Dialog,Intent} from '@blueprintjs/core';
 import axios from 'axios';
-import Moment from 'react-moment';
+// import Moment from 'react-moment';
 
 class AddCustomer extends Component{
     constructor(props){
@@ -13,48 +13,72 @@ class AddCustomer extends Component{
         btnText: "Add Customer",
         colorFemale:{"backgroundColor": "#06bebd","color": "#fff"},
         colorMale: {"backgroundColor": "#fff","color": "#000000"},
-        customer: {},
-        errors:{}
+        customer: {"partnerSideCustomerIdString": '',
+        "firstName": '',
+        "lastName": '',
+        "email": '',
+        "mobile": '',
+        "gender": '',
+        "day": '',
+        "month": '',
+        "year" :'',
+        "addressStreet": '',
+        "addressUnit":'',
+        "addressCity": '',
+        "addressCountry": '',
+        "addressPostalCode": ''},
+        errors:{"partnerSideCustomerIdString": '',
+        "firstName": '',
+        "lastName": '',
+        "email": '',
+        "mobile": '',
+        "gender": '',
+        "dob": '',
+        "addressStreet": '',
+        "addressUnit":'',
+        "addressCity": '',
+        "addressCountry": '',
+        "addressPostalCode": ''}
       };
       this.apiUrl = 'http://partners-alpha.ap-southeast-1.elasticbeanstalk.com';
       this.chooseFemale=this.chooseFemale.bind(this);
   
       this.fcClose = props.fcClose;
-      console.log(this.props);
-      if(props.data!=null){
+      // console.log(this.props);
+      if(props.data!==null){
         this.state.btnText="Update Customer";
         this.fcUpdate = props.fcUpdate;
         
   
         this.state.customer["id"]=props.data["id"];
-        if( props.data.firstName==null){
+        if( props.data.firstName===null){
           this.state.customer["firstName"]="";
         }
         else{
           
           this.state.customer["firstName"] = props.data.firstName;
         }
-        if( props.data.lastName==null){
+        if( props.data.lastName===null){
           this.state.customer["lastName"]="";
         }else{
           this.state.customer["lastName"] = props.data.lastName;
         }
-        if( props.data.email==null){
+        if( props.data.email===null){
           this.state.customer["email"]="";
         }else{
           this.state.customer["email"] = props.data.email;
         }
-        if( props.data.mobile==null){
+        if( props.data.mobile===null){
           this.state.customer["mobile"]="";
         }else{
           this.state.customer["mobile"] = props.data.mobile;
         }
-        if( props.data.gender==null){
+        if( props.data.gender===null){
           this.state.customer["gender"]="";
         }else{
           this.state.customer["gender"] = props.data.gender;
         }
-        if( props.data.dob==null){
+        if( props.data.dob===null){
           this.state.customer["dob"]="";
         }else{
           const moment = require('moment');
@@ -66,27 +90,27 @@ class AddCustomer extends Component{
           this.state.customer["month"] =""+ temp +"";
           this.state.customer["day"] = ""+birthday.getDate()+"";
         }
-        if( props.data.addressStreet==null){
+        if( props.data.addressStreet===null){
           this.state.customer["addressStreet"]="";
         }else{
           this.state.customer["addressStreet"] = props.data.addressStreet;
         }
-        if( props.data.addressUnit==null){
+        if( props.data.addressUnit===null){
           this.state.customer["addressUnit"]="";
         }else{
           this.state.customer["addressUnit"] = props.data.addressUnit;
         }
-        if( props.data.addressCity==null){
+        if( props.data.addressCity===null){
           this.state.customer["addressCity"]="";
         }else{
           this.state.customer["addressCity"] = props.data.addressCity;
         }
-        if( props.data.addressCountry==null){
+        if( props.data.addressCountry===null){
           this.state.customer["addressCountry"]="";
         }else{
           this.state.customer["addressCountry"] = props.data.addressCountry;
         }
-        if( props.data.addressPostalCode==null){
+        if( props.data.addressPostalCode===null){
           this.state.customer["addressPostalCode"]="";
         }else{
           this.state.customer["addressPostalCode"] = props.data.addressPostalCode;
@@ -102,8 +126,10 @@ class AddCustomer extends Component{
       }else{
         this.fcAdd = props.fcAdd;
       }
+      this.toggleDialog = this.toggleDialog.bind(this);
     }
-    handleChange(field, e){         
+    handleChange(field, e){   
+            
       let custome = this.state.customer;
       let error = this.state.errors;
       custome[field] = e.target.value;
@@ -143,7 +169,7 @@ class AddCustomer extends Component{
                   // console.log(res.data.data);
                   // this.toggleDialog(); 
           }).catch(error => {
-            if(error.response.status == 400){
+            if(error.response.status === 400){
               if(error.response.data.errorCode === "error.badRequest.emailRegisteredByOther"){
                 let listError = this.state.errors;
                 listError["email"] = error.response.data.msg;
@@ -188,9 +214,10 @@ class AddCustomer extends Component{
                 
         }
       ).catch(error => {
-          if(error.response.status == 400){
+          if(error.response.status === 400){
             if(error.response.data.errorCode === "error.badRequest.emailRegisteredByOther"){
               let listError = this.state.errors;
+              this.email.focus();
               listError["email"] = error.response.data.msg;
               this.setState({errors:listError});  
             }
@@ -278,7 +305,7 @@ class AddCustomer extends Component{
   
           if(typeof fields["day"] !== "undefined"){
            
-              if(fields["day"]=="" || !fields["day"].match(/^[0-9]/)){
+              if(fields["day"]==="" || !fields["day"].match(/^[0-9]/)){
                   formIsValid = false;
                   if (!focus){
                     this.day.focus();
@@ -300,7 +327,7 @@ class AddCustomer extends Component{
             fields["month"]="01";
           }else{
           if(typeof fields["month"] !== "undefined"){
-            if(fields["month"]=="" || !fields["month"].match(/^[0-9]/)){
+            if(fields["month"]==="" || !fields["month"].match(/^[0-9]/)){
                 formIsValid = false;
                 if (!focus){
                   this.month.focus();
@@ -366,9 +393,9 @@ class AddCustomer extends Component{
    
     chooseFemale(val){
       let custome=this.state.customer;
-      let temp = this.state.colorMale;
-      this.state.colorMale = this.state.colorFemale;
-      this.state.colorFemale = temp;
+      // let temp = this.state.colorMale;
+      // this.state.colorMale = this.state.colorFemale;
+      // this.state.colorFemale = temp;
       if(val){
         custome["gender"]="Female";
       }
@@ -377,7 +404,10 @@ class AddCustomer extends Component{
       }
       this.setState({colorFemale: this.state.colorFemale , colorMale: this.state.colorMale ,customer: custome});
     }
-    toggleDialog = () => this.setState({isOpen: !this.state.isOpen});
+    toggleDialog(){ 
+      let isOpen = !this.state.isOpen;
+      this.setState({isOpen: isOpen});
+    }
     render(){
    
       return (
@@ -625,12 +655,12 @@ class AddCustomer extends Component{
                       </div>
                     </div>
                       <div className="col col-sm-6">
-                      <label className="pt-label unit-number" style={{"margin":"inline-block"}} > 
-                        Postal Code
-                        <small className="error"> {this.state.errors["addressPostalCode"]}</small>
-                        <input className="pt-input unitaddress" ref="addressPostalCode" onChange={this.handleChange.bind(this,"addressPostalCode")}
-                         value={this.state.customer["addressPostalCode"]}  type="text" placeholder="Postal code" dir="auto" />
-                      </label>
+                        <label className="pt-label unit-number" style={{"margin":"inline-block"}} > 
+                          Postal Code
+                          <small className="error"> {this.state.errors["addressPostalCode"]}</small>
+                          <input className="pt-input unitaddress" ref="addressPostalCode" onChange={this.handleChange.bind(this,"addressPostalCode")}
+                          value={this.state.customer["addressPostalCode"]}  type="text" placeholder="Postal code" dir="auto" />
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -664,7 +694,7 @@ class AddCustomer extends Component{
                   <div className="pt-dialog-footer-actions">
                       <button text="Secondary" className="cancel-dialog" intent={Intent.PRIMARY}
                           onClick={this.toggleDialog}
-                          text="Cancel">Cancel</button>
+                          >Cancel</button>
                       <button
                         className="add-customer-dialog"
                          text="Add Customer"

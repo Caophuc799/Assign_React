@@ -267,7 +267,12 @@ input:required {
 .unitaddress{
     margin-top: 16px !important;
 }
-
+.input-search{
+    border-radius: 10px !important;
+}
+.btn-icon-search{
+    cursor: pointer;
+}
 @media only screen and (max-width: 1057px) {
     .inrow .pt-input-group{
         display: inline-block;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import iconuser from './usericon.png'
+import Iconuser from './usericon.png'
 import './App.css'
 
 // const Navbarheader = () => {
@@ -45,7 +45,7 @@ class App extends Component {
                 </div>
               </div>
               <div className='pt-navbar-group pt-align-right'>
-                <button className=' pt-button pt-minimal btn-user'> <img src={iconuser} /><span><b>Stacy</b></span>
+                <button className=' pt-button pt-minimal btn-user'> <img src={Iconuser} alt=""/><span><b>Stacy</b></span>
 
                   <i className='fas fa-sort-down' />
                 </button>

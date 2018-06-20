@@ -188,10 +188,10 @@ class FilterData extends Component {
     if(count===0){
         val = 0;
     }
-    if(count == 1){
+    if(count === 1){
         val += 1;
     }else{
-        if(count == -1){
+        if(count === -1){
             val -= 1;
         }
     }
@@ -209,7 +209,7 @@ class FilterData extends Component {
          
              <Popover
                
-                position={Position.BOTTOM_LEFT}
+                // position={Position.BOTTOM_LEFT}
                 modifiers={{arrow: false}}
                 isOpen={this.state.isOpen}
                 onInteraction={(state) => this.handleInteraction(state)}
@@ -223,7 +223,7 @@ class FilterData extends Component {
                 <button onClick={this.toggleDialog}
               type='button' className='pt-button'><i className='fas fa-filter' /> Filter 
               {
-                  this.state.countFilter == 0 ? "" : <div >
+                  this.state.countFilter === 0 ? "" : <div >
                   <span style={{"fontSize":"15px","marginLeft":"5px","marginRight":"5px"}}> | </span>
                    <div  style={{"color":"#06bebd","display":"inline"}}>  {this.state.countFilter} </div> </div>
            
